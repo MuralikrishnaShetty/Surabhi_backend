@@ -6,17 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class Orders {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer OrderId;
-	private Integer foodId;
+//	private Integer foodId;
 	private String image;
 	private String name;
 	private Integer price;
 	private Integer quantity;
 	private String tag;
-	private Integer userId;
+//	private Integer userId;
 	private String userName;
 	public Integer getOrderId() {
 		return OrderId;
@@ -24,12 +24,7 @@ public class Order {
 	public void setOrderId(Integer orderId) {
 		OrderId = orderId;
 	}
-	public Integer getFoodId() {
-		return foodId;
-	}
-	public void setFoodId(Integer foodId) {
-		this.foodId = foodId;
-	}
+	
 	public String getImage() {
 		return image;
 	}
@@ -60,12 +55,7 @@ public class Order {
 	public void setTag(String tag) {
 		this.tag = tag;
 	}
-	public Integer getUserId() {
-		return userId;
-	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
+	
 	public String getUsename() {
 		return userName;
 	}
@@ -74,24 +64,24 @@ public class Order {
 	}
 	@Override
 	public String toString() {
-		return "Order [OrderId=" + OrderId + ", foodId=" + foodId + ", image=" + image + ", name=" + name + ", price="
-				+ price + ", quantity=" + quantity + ", tag=" + tag + ", userId=" + userId + ", userName=" + userName
+		return "Order [OrderId=" + OrderId + ", image=" + image + ", name=" + name + ", price="
+				+ price + ", quantity=" + quantity + ", tag=" + tag +  ", userName=" + userName
 				+ "]";
 	}
-	public Order(Integer orderId, Integer foodId, String image, String name, Integer price, Integer quantity,
-			String tag, Integer userId, String usename) {
+	public Orders(Integer orderId, String image, String name, Integer price, Integer quantity,
+			String tag, String usename) {
 		super();
 		OrderId = orderId;
-		this.foodId = foodId;
+//		this.foodId = foodId;
 		this.image = image;
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 		this.tag = tag;
-		this.userId = userId;
+//		this.userId = userId;
 		this.userName = usename;
 	}
-	public Order() {
+	public Orders() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.surabhichainrestaurant.foodorder.entity.Order;
+import com.surabhichainrestaurant.foodorder.entity.Orders;
 import com.surabhichainrestaurant.foodorder.service.OrderService;
 
 @RestController
@@ -25,15 +25,15 @@ public class OrderController {
 	
 //	saveing the order 
 	@PostMapping("/add")
-	public  ResponseEntity<List<Order>>save(@RequestBody  List<Order> order){
-		List<Order> savesIteam=service.saveOrder(order);
+	public  ResponseEntity<List<Orders>>save(@RequestBody  List<Orders> order){
+		List<Orders> savesIteam=service.saveOrder(order);
 		return ResponseEntity.ok( savesIteam);
 	}
 	
 //	
 	@GetMapping("/orders")
-	public ResponseEntity<List<Order>>getAll(){
-		List<Order> allIteam=service.getOrder();
+	public ResponseEntity<List<Orders>>getAll(){
+		List<Orders> allIteam=service.getOrder();
 		return ResponseEntity.ok(allIteam);
 	}
 	

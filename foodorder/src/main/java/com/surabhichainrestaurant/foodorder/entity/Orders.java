@@ -56,11 +56,11 @@ public class Orders {
 		this.tag = tag;
 	}
 	
-	public String getUsename() {
+	public String getusername() {
 		return userName;
 	}
-	public void setUsename(String usename) {
-		this.userName = usename;
+	public void setusername(String username) {
+		this.userName = username;
 	}
 	@Override
 	public String toString() {
@@ -69,7 +69,7 @@ public class Orders {
 				+ "]";
 	}
 	public Orders(Integer orderId, String image, String name, Integer price, Integer quantity,
-			String tag, String usename) {
+			String tag, String username) {
 		super();
 		OrderId = orderId;
 //		this.foodId = foodId;
@@ -79,7 +79,7 @@ public class Orders {
 		this.quantity = quantity;
 		this.tag = tag;
 //		this.userId = userId;
-		this.userName = usename;
+		this.userName = username;
 	}
 	public Orders() {
 		super();
